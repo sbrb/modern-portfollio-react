@@ -3,7 +3,27 @@ import AutoTyping, { BlinkCursor } from "react-auto-typing";
 import "./ContactSection.css";
 
 function ContactSection() {
-
+  function sendEmail(e) {
+    let name = document.getElementById("nameField").value;
+    let email = document.getElementById("emailField").value;
+    let msg = document.getElementById("messageField").value;
+    let body = 'Name: ' + name + "<br>Email: " + email + "<br>Msg: " + msg;
+    const Email = "https://smtpjs.com/v3/smtp.js"
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "biswasshayan339@gmail.com",
+      Password: "ABD1B37DB5D08FA3C85415CAD3642212A55C",
+      To: 'biswasshayan339@gmail.com',
+      From: email,
+      Subject: "portfolio",
+      Body: body
+    }).then(
+      message => alert(message)
+    );
+  }
+  function reset() {
+    document.getElementById("contact_form").reset();
+  }
   return (
     <section className="contact section" id="contact">
       <h2 className="section_title">
@@ -47,7 +67,7 @@ function ContactSection() {
           ></textarea>
 
           <input
-            // onClick={contactFormSubmit}
+            onClick={[sendEmail, reset]}
             type="submit"
             value="Send"
             className="button contact_button"
@@ -59,3 +79,4 @@ function ContactSection() {
 }
 
 export default ContactSection;
+
