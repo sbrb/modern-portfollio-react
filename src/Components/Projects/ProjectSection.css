@@ -1,0 +1,25 @@
+.projects_container {
+    row-gap: 2rem;
+}
+
+.projects_img {
+    box-shadow: 0 4px 25px #0e243126;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.projects_img img {
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .projects_container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
