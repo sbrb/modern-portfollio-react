@@ -1,0 +1,40 @@
+.contact_container {
+    row-gap: 2rem;
+}
+
+
+.contact_input {
+    width: 100%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--second-color);
+    outline: none;
+    margin-bottom: var(--mb-4);
+    resize: none;
+    text-align: center;
+    outline: none;
+    border: 2px solid orange;
+}
+
+
+.contact_button {
+    display: block;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    cursor: pointer;
+    margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+
+    .contact_form {
+        width: 360px;
+    }
+
+    .contact_container {
+        justify-items: center;
+    }
+}

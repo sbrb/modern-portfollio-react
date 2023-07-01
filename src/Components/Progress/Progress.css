@@ -1,0 +1,35 @@
+#progress {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00000033;
+    cursor: pointer;
+    z-index: 4;
+}
+
+#progress-value {
+    display: block;
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    color: #001a2e;
+}
+
+#progress-value i {
+    color: red;
+    font-size: 1.3rem;
+}
+
+#progress-value i:hover {
+    color: blue;
+}
+
